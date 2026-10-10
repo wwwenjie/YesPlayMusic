@@ -39,11 +39,16 @@ export default {
       type: Boolean,
       default: false,
     },
+    minWidth: {
+      type: String,
+      default: 'calc(min(23rem, 100vw))',
+    },
   },
   computed: {
     modalStyles() {
       return {
         width: this.width,
+        minWidth: this.minWidth,
       };
     },
   },
@@ -162,7 +167,7 @@ export default {
   }
   button.primary {
     color: var(--color-primary-bg);
-    background: var(--color-primary);
+    background: var(--color-primary-gradient);
     font-weight: 500;
   }
   button.block {
